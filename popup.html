@@ -1,0 +1,125 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked,
+ because the "browser_action" field in manifest.json
+ contains the "default_popup" key with value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Character Counts</title>
+    <meta name="description" content="This extension allows the user to see how many characters are in a selection's range. It will also convert characters between ASCII (char), ASCII (int), && 8-bit (Byte).">
+    <style type="text/css">
+      body {
+        /*color: #9a5b0b;*/
+        font-family: 'Sarpanch', sans-serif;
+          /*font-family: 'Baloo Thambi', cursive;*/
+          /*font-family: 'Baumans', cursive;*/
+          font-size: 12px;
+        margin: 10px;
+        white-space: nowrap;
+        width: 350px;
+      }
+      h1 {
+        font-size: 15px;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      div {
+        margin: 0 0 0.5rem;
+        padding: 0rem;
+      }
+      #container {
+        /*align-items: center;*/
+        /*display: flex;*/
+        /*justify-content: space-between;*/
+      }
+      .hidden {
+        display: none;
+      }
+      #ascii-div,
+      #convert1111 {
+        /* Initially turn off 'convert block' section entirely. */
+        /* Initially turn off 'click to convert' message:
+             This is not redundant to turning off the entire 'convert block'
+             section due to dynamic updating requiring independent control. */
+        display: none;
+      }
+      #convert010T {
+        background-color: #ffffdf;
+        border: 1px solid #aaa;
+          border-radius: 4px;
+        color: #008833;
+        display: inline-block;
+        font-family: monospace;
+        font-weight: 600;
+        /* outline: 1px solid blue; */
+        overflow: auto;
+        padding: 0.1rem 0.2rem 0.2rem;
+        vertical-align: top;
+        white-space: normal;
+        width: 250px;
+      }
+      #convert0101 {
+        color: #0011ff;
+        text-transform: uppercase;
+      }
+      #convert0101:active {
+        color: #0055ff;
+      }
+      input#charVal {
+        width: 270px;
+      }
+      .pageCount-span,
+      .pageCharPct-span {
+        display: none;
+      }
+      textarea#pageAllText {
+        display: none;
+        min-height: 80px;
+        min-width: 325px;
+        outline: 1px solid yellow;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our
+      - Content Security Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <h1>Character Counts</h1>
+    <div id="container">
+      <form>
+        <input type="text" id="charCount" disabled="disabled" size="4"> : Selected Characters<br>
+        <span id="pageCount-span"><input type="text" id="pageCount" disabled="disabled" size="4"> : Characters on Page (<a href="#showPageText" id="showPageText">show</a>)</span><br/>
+        <span id="pageCharPct-span"><input type="text" id="pageCharPct" disabled="disabled" size="4"> : Selected vs Page</span><br/>
+        <br/>
+        <textarea id="pageAllText" readonly="readonly"></textarea>
+        <h4 id="charCount-h4">Characters in Selection</h4>
+        <div><input type="text" id="charVal"></div>
+      </form>
+
+      <div id="ascii-div">
+        <h4>Convert between ASCII (char), ASCII (int), &amp;&amp; 8-bit (Byte)</h4>
+        <div id="convert0001"><small>(auto-rotates once - <a id="convert0000" href="#convert0000">make it stop!)</a></small></div>
+        <div><span id="convert010T"></span> <small id="convert1111">&larr; <a id="convert0101" href="#convert0101">convert</a></small></div>
+        <br/>
+      </div>
+
+      <p class="hidden">
+        <select id="dropdown">
+          <option selected disabled hidden value=''></option>
+          <option value="white">White</option>
+          <option value="pink">Pink</option>
+          <option value="green">Green</option>
+          <option value="yellow">Yellow</option>
+        </select>
+      </p>
+    </div>
+  </body>
+</html>
