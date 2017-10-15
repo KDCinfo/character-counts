@@ -5,6 +5,8 @@
 * See how many characters are in a selection's range.
 * The extension will also convert characters between ASCII (char), ASCII (int), &amp;&amp; 8-bit (Byte).
 
+* Harvard's CS50 'Final Project' Presentation: [https://youtu.be/HcT2xQwNCX4](https://youtu.be/HcT2xQwNCX4)
+
 The 'character conversion' code can also be found:
 
 * [CodePen](https://codepen.io/KeithDC/pen/aLyOjy)
