@@ -37,6 +37,13 @@
         /*display: flex;*/
         /*justify-content: space-between;*/
       }
+      #containerError {
+        display: none;
+      }
+      #containerError,
+      #containerErrorTxt {
+        white-space: normal;
+      }
       .hidden {
         display: none;
       }
@@ -83,6 +90,11 @@
         min-width: 325px;
         outline: 1px solid yellow;
       }
+      footer {
+        margin-top: 1rem;
+        font-style: italic;
+        font-size: 11px;
+      }
     </style>
 
     <!--
@@ -95,6 +107,15 @@
   </head>
   <body>
     <h1>Character Counts</h1>
+    <div id="containerError">
+        Doh!
+        Are you on a Chrome page by chance?
+        For instance, are you on the Chrome store page?
+        Unfortunately, Chrome extensions aren't allowed to interact with an actual Chrome page.
+        <p>The error provided was:</p>
+        <p id="containerErrorTxt"></p>
+        <p>If that wasn't the case, please feel free to <a target="characterCounts" href="https://github.com/KDCinfo/character-counts/issues">open an issue</a> on GitHub.
+      </div>
     <div id="container">
       <form>
         <input type="text" id="charCount" disabled="disabled" size="4"> : Selected Characters<br>
@@ -112,6 +133,8 @@
         <div><span id="convert010T"></span> <small id="convert1111">&larr; <a id="convert0101" href="#convert0101">convert</a></small></div>
         <br/>
       </div>
+
+      <footer>Character Counts is <a target="characterCounts" href="https://github.com/KDCinfo/character-counts">Open Source on GitHub</a>.</footer>
 
       <p class="hidden">
         <select id="dropdown">

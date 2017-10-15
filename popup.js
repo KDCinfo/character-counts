@@ -30,26 +30,38 @@ function displayIt() {
   //
 
   chrome.tabs.executeScript( {
+
     // Getting selection from active tab/page: [rsanchez](https://stackoverflow.com/a/19165930/638153)
     code: "window.getSelection().toString();"
 
   }, function(selection) {
 
-    document.getElementById('charVal').value = typeof(selection) === 'undefined' ? '' : selection[0]; // Don't .trim()
+    if (chrome.runtime.lastError) {
 
-    const charValLength = document.getElementById('charVal').value.length;
+      document.getElementById('container').style.display = 'none';
+      document.getElementById('containerError').style.display = 'block';
+      document.getElementById('containerErrorTxt').innerHTML = chrome.runtime.lastError.message;
+      // console.log('chrome.tabs', chrome.runtime.lastError);
 
-    document.getElementById('charCount').value = charValLength;
+    } else {
 
-    if (charValLength > 0) {
-      document.getElementById('pageCount-span').style.display = 'inline-block';
-      document.getElementById('pageCharPct-span').style.display = 'inline-block';
+      // Place selected text (from web page) into input field (in extension popup)
+      document.getElementById('charVal').value = typeof(selection) === 'undefined' ? '' : selection[0];
 
-      allSelectedCharCount = charValLength;
-      setPageCharPct();
+      const charValLength = document.getElementById('charVal').value.length;
 
-      // Once the HTML <input> tag is updated, begin the auto-rotation cycle
-      autoChange();
+      document.getElementById('charCount').value = charValLength;
+
+      if (charValLength > 0) {
+        document.getElementById('pageCount-span').style.display = 'inline-block';
+        document.getElementById('pageCharPct-span').style.display = 'inline-block';
+
+        allSelectedCharCount = charValLength;
+        setPageCharPct();
+
+        // Once the HTML <input> tag is updated, begin the auto-rotation cycle
+        autoChange();
+      }
     }
   });
 
@@ -58,16 +70,27 @@ function displayIt() {
   //
 
   chrome.tabs.executeScript( {
+
     // Select all text on page: [Max G J Panas](https://stackoverflow.com/a/10606380/638153)
     code: "document.body.innerText;"
 
   }, function(selection) {
 
-    document.getElementById('pageCount').value = selection[0].trim().length;
-    document.getElementById('pageAllText').value = selection[0].trim();
+    if (chrome.runtime.lastError) {
 
-    allPageCharCount = selection[0].trim().length;
-    setPageCharPct();
+      document.getElementById('container').style.display = 'none';
+      document.getElementById('containerError').style.display = 'block';
+      document.getElementById('containerErrorTxt').innerHTML = chrome.runtime.lastError.message;
+      // console.log('chrome.tabs', chrome.runtime.lastError);
+
+    } else {
+
+      document.getElementById('pageCount').value = selection[0].trim().length;
+      document.getElementById('pageAllText').value = selection[0].trim();
+
+      allPageCharCount = selection[0].trim().length;
+      setPageCharPct();
+    }
   });
 
   //
