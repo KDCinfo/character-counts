@@ -1,8 +1,10 @@
 # Character Counts
 
-## a chrome extension
+## a Chrome extension
 
-* See how many characters are in a selection's range.
+Character Counts is a Chrome extension available on the [Chrome Web Store](https://chrome.google.com/webstore/detail/character-counts/oejjbdomlkocggekafhncjfgligaadfd).
+
+* It allows you to see how many characters are in a pre-selected range.
 * The extension will also convert characters between ASCII (char), ASCII (int), &amp;&amp; 8-bit (Byte).
 
 ## character conversion
@@ -15,7 +17,7 @@ The 'character conversion' section of code is available separately:
 ## background
 
 Character Counts was the result of my final project for Harvard's CS50 course.
-The 'Final Project' Presentation can be [found on YouTube](https://youtu.be/HcT2xQwNCX4) at: [https://youtu.be/HcT2xQwNCX4](https://youtu.be/HcT2xQwNCX4)
+My 'Final Project' Presentation can (embarssingly enough) be [found on YouTube](https://youtu.be/HcT2xQwNCX4) at: [https://youtu.be/HcT2xQwNCX4](https://youtu.be/HcT2xQwNCX4)
 
 ## history
 
@@ -23,3 +25,6 @@ The 'Final Project' Presentation can be [found on YouTube](https://youtu.be/HcT2
 * Added error logic (primarily for when running extension on a Chrome page).
 * Added link to GitHub repository.
 * Spruced up readme.
+
+2017-10-17
+* Added link to Chrome Store.
