@@ -6,6 +6,154 @@ Key File: \character-counts.pem
 Keep your key file in a safe place. You will need it to create new versions of your extension.
 
 ----------
+
+<div>Also available as
+    a <a href="https://gist.github.com/KDCinfo/be7b9dbd42c6cc3c0e4ae79bfae9ffb9">Gist on GitHub</a> and is included as part of
+    a <a href="https://chrome.google.com/webstore/detail/character-counts/oejjbdomlkocggekafhncjfgligaadfd">Chrome Web Extension</a> I created (called 'Character Counts').</div>
+
+<div>Also available as
+    a <a href="https://codepen.io/KeithDC/pen/aLyOjy">Pen on CodePen</a> and is included as part of
+    a <a href="https://chrome.google.com/webstore/detail/character-counts/oejjbdomlkocggekafhncjfgligaadfd">Chrome Web Extension</a> I created (called 'Character Counts').</div>
+
+----------
+
+[PROJECT/PRESENTATION CREATION]
+
+Extension Creation:
+    Ubuntu 16.04 LTS
+        Runs inside a VirtualBox VM
+    Windows 10
+        Sublime Text 3
+
+Presentation:
+    OpenOffice Impress
+        At first I didn't think this would work, as I couldn't figure out how to do slide transitions (gotta open the right panel... doh!!)
+        I was impressed with the straightforwardness of Impress. It worked really well for such a 'relatively' simple project such as this.
+        ('relatively'-speaking, of course, being this presentation took longer than all of my projects.)
+    Audacity
+        I'd used Audacity 10+ years back, and it was as fun to use today as it was back then.
+        If sound is required in your project at all, Audacity is a project-saver!!!
+    ActivePresenter
+        Captured the Character Counts walkthrough; saved as MP4 (ported to OpenOffice Impress).
+        I did not redo all the slides I'd done with OpenOffice Impress. Instead, I simply recorded the OpenOffice Impress playback.
+        I had one issue with the MP4 that was generated: As ActivePresenter recorded the OpenOffice Impress presentation playback, ActivePresenter would not record the MP4 section of the OpenOffice Impress playback. It just showed a magento/purplish screen.
+        I improved this by splitting the ActivePresentation recording, and importing the MP4 directly with that section of the audio (which came over to the new track after I split the main track).
+        I then added the few screens and their transitions at the end.
+    Adobe Photoshop Elements 12
+    Windows Recorder
+        (didn't end up using)
+        Found out later it only records up to 30 second clips.
+    Win-G [Windows 10 Screen Recorder]
+        (didn't end up using)
+        Would only capture the browser window, and not the Chrome extension pop-up.
+        I tried starting Win-G with the pop-up open and active, and it still wouldn't record it.
+    Shotcut
+        (didn't end up using)
+        Got everything working except, Win-G didn't work as hoped, so needed a screen capture, and
+        being ActivePresenter already had one built in, just did what little editing I had left in there
+        (there wasn't much editing to do after I'd done most of the presentation with OpenOffice Impress.)
+
+[CHROME STORE DETAILED DESCRIPTION]
+
+This extension is fairly simple, straight-forward, and self-explanatory (if not, please let me know what I can do to enhance it).
+
+Its code is also sourced on GitHub (feel free to make a PR for adding something useful).
+* GitHub: https://github.com/KDCinfo/character-counts
+
+----------
+DISREGARD
+----------
+[SOFTWARE CONSIDERED]
+Premiere Elements 15
+    Upgrade for US$79.99
+Photoshop Elements 15
+& Premiere Elements 15
+    Upgrade for US$119.99
+----------
+[INITIAL GOOGLE SEARCH]
+How to make a wall of text presentable?
+How to present a wall of text?
+presenting a wall of text
+convert wall of text
+
+I always 'kind of' knew what a byte was, but as with so many other concepts, Harvard's CS50 solidified all this knowledge for me throughout the entire course.
+Thanks to David for some awesome presentations, and to Doug and Zamyla for their countless hours of video presentations as well.
+"Character Counts" was my first browser extension and was inspired by Walter Martin's seminar on Chrome extensions (part of Harvard's CS50 Final Project).
+P.S. The archeology presentation was fascinating and superb! I need to go back and finish playing "Riddle of the Sphinx" :) (and its sequel!)
+
+----------
+Slideshow (capture with Win-G)
+----------
+
+[slide 0 - splash screen - 6 seconds]
+    (voiceover -- Hello there and welcome to my final project for Harvard's CS50 course)
+
+Fade out
+
+Fade in
+[slide 1 - begin - cue 10-second music clip?]
+    In the beginning...
+
+        I had NO idea...
+
+            of just WHAT...
+
+                I would create for a final CS50 project.
+                :-/ <unsure crooked smiley face>
+                [squash out?]
+
+[slide]
+    (well now that was a tad more anticlimactic than expected!)
+
+(2-sec pause fade out)
+
+[slide]
+    (anyways...)
+
+[2-sec pause slide out]
+(stop mucis clip)
+
+[slide - fade in - portfolio page]
+    Hello again. My name is Keith Commiskey.
+    The following video collage is a little background and walkthrough of my final project for Harvard's CS50 course.
+
+[slide - CS50 - https://www.youtube.com/user/cs50tv]
+    I watched through all the end-of-course seminar videos, and wondered if I could...
+
+[slide - YouTube - Seminar - Automated Analysis of Music and Audio (Vivek Jayaram) - https://www.youtube.com/watch?v=SFtoiK64TaY&t=15]
+    ...become a DJ?
+    Maybe not... I can't really tell a tuning fork from a carving fork
+    (I could however direct you to the nearest Git Fork).
+
+    But then...
+
+[slide - YouTube - Seminar - Chrome Extensions (Walter Martin) - https://www.youtube.com/watch?v=Zz7HRDj9E-o&t=17]
+    ... ...Creating a browser extension would be fun; and getting one in the Chrome Store could be kind of cool.
+
+[slide - GitHub 'Character Counts' - https://github.com/KDCinfo/character-counts]
+    And so with that, I set out to build my first browser extension. The result? I built 'Character Counts': A Chrome Web Extension written with a little JavaScript.
+
+----------
+Cross over to live-capture on Chrome (single-tab page) (capture with Win-G)
+----------
+
+The extension counts any selected characters on the page, and can convert them between ASCII (char), ASCII (int), and a binary 8-bit representation of a byte.
+It comes complete with a screenshot, and its very own custom icon which I also created.
+
+The extension was published on October 1, 2017, and can be found in the Chrome Web Store at: (https://chrome.google.com/webstore/detail/character-counts/oejjbdomlkocggekafhncjfgligaadfd).
+It can also be found via the store's search: (https://chrome.google.com/webstore/search/character%20counts?hl=en-US&_category=ext/11-web-development)
+
+The text conversion part I did for fun, in that I wrote that component separate so it can be used in other environments (such as inside HTML e-mails, or on my resume :) ).
+I always 'kind of' knew what a byte was, but as with so many other concepts, Harvard's CS50 solidified all this knowledge for me throughout the entire course.
+
+The conversion section of the code is available separately as
+    a <a href="https://gist.github.com/KDCinfo/be7b9dbd42c6cc3c0e4ae79bfae9ffb9">Gist on GitHub</a> and as
+    a <a href="https://codepen.io/KeithDC/pen/aLyOjy">Pen on CodePen</a>.</div>
+
+P.S. The archeology presentation was fascinating and superb! I need to go back and finish playing "Riddle of the Sphinx" :) (and its sequel!)
+
+Inquiring Minds (the backstory): I'm always wanting to know the character counts of things for one reason or another, and find myself having to open OpenOffice Writer quite often (a lovely app, but a tad overkill to get a simple character count).
+----------
 Attribution:
 https://longzijun.wordpress.com/2011/11/24/short-instrumental-themes/
 ----------
@@ -53,7 +201,3 @@ I always 'kind of' knew what a byte was, but as with so many other concepts, Har
 The conversion section of the code is available separately as
     a <a href="https://gist.github.com/KDCinfo/be7b9dbd42c6cc3c0e4ae79bfae9ffb9">Gist on GitHub</a> and as
     a <a href="https://codepen.io/KeithDC/pen/aLyOjy">Pen on CodePen</a>.</div>
-
-----------
-
-Thanks to David for some awesome presentations, and to Doug and Zamyla for their countless hours of video presentations as well.

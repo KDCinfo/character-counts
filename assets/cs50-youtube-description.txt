@@ -1,144 +1,115 @@
---------------------------------------------------
-[PROJECT INFORMATION]
---------------------------------------------------
+All the text below is the actual YouTube video description|
+YouTube Intro: https://youtu.be/HcT2xQwNCX4               |
+----------------------------------------------------------+
 
-The Character Counts Chrome browser extension was published on October 1, 2017, and can be found in the Chrome Web Store at: (https://chrome.google.com/webstore/detail/character-counts/oejjbdomlkocggekafhncjfgligaadfd).
-It can also be found via the store's search: (https://chrome.google.com/webstore/search/character%20counts?hl=en-US&_category=ext/11-web-development)
+Hello there, and welcome to my final project for Harvard's CS50 course.
+
+["CHARACTER COUNTS"]
+
+The Character Counts Chrome browser extension was published on October 1, 2017, and can be found in the Chrome Web Store.
 
 The extension comes complete with a screenshot, and its very own custom icon(s) which I created as part of the extension design.
 
 I wrote the text conversion part of this extension separately so it can also be used in other environments (such as inside HTML e-mails for fun).
-* Gist on GitHub: https://gist.github.com/KDCinfo/be7b9dbd42c6cc3c0e4ae79bfae9ffb9
-* Pen on CodePen: https://codepen.io/KeithDC/pen/aLyOjy
-
-P.S. The archeology presentation was fascinating and superb! I need to go back and finish playing "Riddle of the Sphinx" :) (and its sequel!)
 
 Inquiring Minds (the backstory): I'm always wanting to know the character counts of things for one reason or another, and find myself having to open OpenOffice Writer quite often (a lovely app, but a tad overkill to get a simple character count).
 
-----------
-Attribution:
-https://longzijun.wordpress.com/2011/11/24/short-instrumental-themes/
-----------
+[REFERENCES]
 
-Slide and short video thoughts (choreography):
-CodePen screen            - https://codepen.io/KeithDC/pen/aLyOjy
-Gist screen               - https://gist.github.com/KDCinfo/be7b9dbd42c6cc3c0e4ae79bfae9ffb9
-GitHub 'Character Counts' - https://github.com/KDCinfo/character-counts
+[RELEVANT RESOURCES]
+GitHub (Open Source)      - https://github.com/KDCinfo/character-counts
+Chrome Web Store:         - https://chrome.google.com/webstore/detail/character-counts/oejjbdomlkocggekafhncjfgligaadfd
+Chrome Web Store Search:  - https://chrome.google.com/webstore/search/character%20counts?hl=en-US&_category=ext/11-web-development
 
-----------
-Chrome Store Detailed Description:
+[CHARACTER CONVERSION CODE]
+'Convert 0101' CodePen    - https://codepen.io/KeithDC/pen/aLyOjy
+'Convert 0101' Gist       - https://gist.github.com/KDCinfo/be7b9dbd42c6cc3c0e4ae79bfae9ffb9
 
-This extension is fairly simple, straight-forward, and self-explanatory (if not, please let me know what I can do to enhance it).
+[ATTRIBUTION]
+Instrumental Intro Music  - https://longzijun.wordpress.com/2011/11/24/short-instrumental-themes/
+[SLIDE] - CS50            - https://www.youtube.com/user/cs50tv
+[SLIDE] - Vivek Jayaram: Automated Analysis of Music and Audio
+                          - https://www.youtube.com/watch?v=sftoik64tay&t=15
+[SLIDE] - Walter Martin: Chrome Extensions
+                          - https://www.youtube.com/watch?v=zz7hrdj9e-o&t=17
 
-Its code is also sourced on GitHub (feel free to make a PR for adding something useful).
-* GitHub: https://github.com/KDCinfo/character-counts
+[WHY I TOOK CS50]
 
-----------
-Premiere Elements 15
-    Upgrade for US$79.99
-Photoshop Elements 15
-& Premiere Elements 15
-    Upgrade for US$119.99
-----------
-How to make a wall of text presentable?
-How to present a wall of text?
-presenting a wall of text
-convert wall of text
+In my research to become a better developer, I found Harvard's CS50 course referenced in the following article by Zach Shallbetter:
+    https://github.com/frontenddevelopers/Frontend-The-Beaten-Path
 
-I always 'kind of' knew what a byte was, but as with so many other concepts, Harvard's CS50 solidified all this knowledge for me throughout the entire course.
-Thanks to David for some awesome presentations, and to Doug and Zamyla for their countless hours of video presentations as well.
-It was my first browser extension and was inspired by Walter Martin's seminar on Chrome extensions (part of Harvard's CS50 Final Project).
-Inquiring Minds: I'm always wanting to know the character counts of things for one reason or another, and find myself having to open OpenOffice Writer quite often (a lovely app, but a tad overkill to get a simple character count).
+Sounds good, but why take the course?
 
---------------------------------------------------
+I subsequently found the following question: [How Hard is CS50x](https://www.quora.com/How-hard-is-CS50x)
+    Quora answer by John Birchall on Mar 3, 2016
+    "For someone who is a beginner or near beginner in computer science, or C programming, or web programming, or algorithms, all the good things they say about the course are true."
+
+In my 28-year career being self-taught with computers, I felt I could benefit from some solid CS fundamentals as I continue my current venture into full-stack JavaScript engineering.
+
+[PROJECT/PRESENTATION CREATION]
+
+Extension Creation:
+    Ubuntu 16.04 LTS (VirtualBox VM)
+    Sublime Text 3 (Win 10)
+
+Presentation:
+    OpenOffice Impress
+    Audacity
+    ActivePresenter
+    Photoshop Elements
+
+-----------------------
 [TRANSCRIPT]
---------------------------------------------------
+-----------------------
 
-
---------------------------------------------------
 [SLIDE - SPLASH PAGE]
---------------------------------------------------
-
+-----------------------
 Hello there and welcome to my final project for Harvard's CS50 course.
 
-
---------------------------------------------------
 [SLIDES - INSTRUMENTAL INTRO]
---------------------------------------------------
+-----------------------
 In the beginning...
     I had NO idea...
         of just WHAT...
             I would create for a final CS50 project.
-            :-/ <unsure crooked smiley face>
+            :-/ &lt;unsure crooked smiley face&gt;
 
-
---------------------------------------------------
 [SLIDE - FADE IN - PORTFOLIO PAGE]
---------------------------------------------------
 
 Hello again. My name is Keith Commiskey.
-
 The following video collage is a little background and walkthrough of my final project for Harvard's CS50 course.
 
-
---------------------------------------------------
 [SLIDE - CS50 - https://www.youtube.com/user/cs50tv]
-    --------------------------------------------------
-    Z:\chrome\extensions\character-counts\assets\audio\i-watched-through-all-the-videos-00.wav
---------------------------------------------------
-
+-----------------------
 I watched through all the end-of-course seminar videos, and I wondered if I could...
 
-
---------------------------------------------------
 [SLIDE - YOUTUBE - SEMINAR - AUTOMATED ANALYSIS OF MUSIC AND AUDIO (VIVEK JAYARAM) - https://www.youtube.com/watch?v=sftoik64tay&t=15]
-    --------------------------------------------------
-    Z:\chrome\extensions\character-counts\assets\audio\and-i-wondered-if-i-could-00.wav
---------------------------------------------------
-
+-----------------------
 ...become a DJ?
-
 Maybe not... I can't really tell a tuning fork from a carving fork
-
 (I could however direct you to the nearest Git Fork).
-
 But... then...
 
-
---------------------------------------------------
 [SLIDE - YOUTUBE - SEMINAR - CHROME EXTENSIONS (WALTER MARTIN) - https://www.youtube.com/watch?v=zz7hrdj9e-o&t=17]
-    --------------------------------------------------
---------------------------------------------------
-
+-----------------------
 ... ...Creating a browser extension would be fun; and getting one in the Chrome Store could be kind of cool.
 
-
---------------------------------------------------
 [SLIDE - GITHUB 'CHARACTER COUNTS' - https://github.com/kdcinfo/character-counts]
-    --------------------------------------------------
---------------------------------------------------
-
+-----------------------
 And so with that, I set out to build my first browser extension.
 The result? I built 'Character Counts': A Chrome Web Extension written with a little JavaScript.
 
-
-----------
 Cross over to live-capture on Chrome (single-tab page) (capture with Win-G)
-----------
+-----------------------
 
-[rest03] B
-
+[MP4 SCREEN CAPTURE FROM ActivePresenter]
+-----------------------
 The extension will count selected characters on the page -- and can convert them between ASCII (char), ASCII (int), and a binary 8-bit representation of a byte.
-
 The text conversion part I wrote first as its own component, so it can be used in other environments. And that code is also available separately.
 
-
-[rest03] A
-
+[FINAL SLIDES]
+-----------------------
 That's about it.
-
 Feel free to submit a Pull Request with any suggestions or enhancements.
-
 All the pertinent URLs are provided in the video description.
-
 Thanks for watching!
