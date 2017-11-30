@@ -17,7 +17,7 @@ The 'character conversion' section of code is available separately:
 ## background
 
 Character Counts was the result of my final project for Harvard's CS50 course.
-My 'Final Project' Presentation can (embarssingly enough) be [found on YouTube](https://youtu.be/HcT2xQwNCX4) at: [https://youtu.be/HcT2xQwNCX4](https://youtu.be/HcT2xQwNCX4)
+My 'Final Project' Presentation can (embarssingly enough) be [found on YouTube](https://youtu.be/xvhd1N7xL5k) at: [https://youtu.be/xvhd1N7xL5k](https://youtu.be/xvhd1N7xL5k)
 
 ## history
 
