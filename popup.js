@@ -319,7 +319,7 @@ function convertAItoB() {
     .reduce( (word, ltr, idx) => {
       word[idx] = byteString(parseInt(ltr, 10));
       return word;
-    }, []).join(''); // .replace(/,/g, '');
+    }, []).join(' '); // .replace(/,/g, '');
 }
 
 function convertBtoAC() {
@@ -339,7 +339,7 @@ function convertBtoAI() {
       // Thanks to: https://stackoverflow.com/a/21354328/638153
       word[idx] = parseInt(ltr, 2).toString(10); // <--^^^
       return word;
-    }, []).join(''); // .replace(/,/g, '');
+    }, []).join(' '); // .replace(/,/g, '');
 }
 
 function convertAtoAIB(whichConvert) {
