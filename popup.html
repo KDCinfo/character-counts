@@ -32,6 +32,13 @@
         margin: 0 0 0.5rem;
         padding: 0rem;
       }
+      a,
+      a:visited {
+        color: blue;
+      }
+      a:hover {
+        color: green;
+      }
       #container {
         /*align-items: center;*/
         /*display: flex;*/
@@ -90,6 +97,23 @@
         min-width: 325px;
         outline: 1px solid yellow;
       }
+      .legend {
+        display: flex;
+        justify-content: space-around;
+      }
+      .legend span {
+        border: 1px dotted lightgray;
+        display: inline-block;
+        height: 22px;
+        padding: 0.75em 0.75em 0.25em 0.5em;
+        text-align: center;
+        vertical-align: bottom;
+
+      }
+      .legend span input {
+        margin: 0;
+        vertical-align: bottom;
+      }
       footer {
         margin-top: 1rem;
         font-style: italic;
@@ -107,31 +131,47 @@
   </head>
   <body>
     <h1>Character Counts</h1>
+
     <div id="containerError">
-        Doh!
-        Are you on a Chrome page by chance?
-        For instance, are you on the Chrome store page?
-        Unfortunately, Chrome extensions aren't allowed to interact with an actual Chrome page.
-        <p>The error provided was:</p>
-        <p id="containerErrorTxt"></p>
-        <p>If that wasn't the case, please feel free to <a target="characterCounts" href="https://github.com/KDCinfo/character-counts/issues">open an issue</a> on GitHub.
-      </div>
+      Doh!
+      Are you on a Chrome page by chance?
+      For instance, are you on the Chrome store page?
+      Unfortunately, Chrome extensions aren't allowed to interact with an actual Chrome page.
+      <p>The error provided was:</p>
+      <p id="containerErrorTxt"></p>
+      <p>
+        If that wasn't the case, please feel free to <a target="characterCounts" href="https://github.com/KDCinfo/character-counts/issues">open an issue</a> on GitHub.
+      </p>
+    </div>
+
     <div id="container">
       <form>
         <input type="text" id="charCount" disabled="disabled" size="4"> : Selected Characters<br>
         <span id="pageCount-span"><input type="text" id="pageCount" disabled="disabled" size="4"> : Characters on Page (<a href="#showPageText" id="showPageText">show</a>)</span><br/>
         <span id="pageCharPct-span"><input type="text" id="pageCharPct" disabled="disabled" size="4"> : Selected vs Page</span><br/>
+
         <br/>
         <textarea id="pageAllText" readonly="readonly"></textarea>
+
+        <h4>Convert between ASCII (char), ASCII (int), &amp;&amp; 8-bit (Byte)</h4>
         <h4 id="charCount-h4">Characters in Selection</h4>
-        <div><input type="text" id="charVal"></div>
+        <div>
+          <input type="text" id="charVal">
+        </div>
       </form>
 
       <div id="ascii-div">
-        <h4>Convert between ASCII (char), ASCII (int), &amp;&amp; 8-bit (Byte)</h4>
         <div id="convert0001"><small>(auto-rotates once - <a id="convert0000" href="#convert0000">make it stop!)</a></small></div>
         <div><span id="convert010T"></span> <small id="convert1111">&larr; <a id="convert0101" href="#convert0101">convert</a></small></div>
-        <br/>
+        Source:&nbsp;
+        <label class="convert-source"><input type="radio" name="convert-source" class="convert-radio-ac" value="ac" checked />&nbsp;ASCII(char)</label>&nbsp;
+        <label class="convert-source"><input type="radio" name="convert-source" class="convert-radio-ai" value="ai" />&nbsp;ASCII(int)</label>&nbsp;
+        <label class="convert-source"><input type="radio" name="convert-source" class="convert-radio-b" value="b" />&nbsp;Binary</label>
+        <br/><br/>
+        <div class="legend">
+          <span><input type="radio" checked /> = Source String</span>
+          <span><u>Underline</u> = Converted Output</span>
+        </div>
       </div>
 
       <footer>Character Counts is <a target="characterCounts" href="https://github.com/KDCinfo/character-counts">Open Source on GitHub</a>.</footer>

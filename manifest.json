@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Character Counts",
-  "version": "1.2",
+  "version": "2.0",
   "icons": { "16": "icon16.png",
              "32": "icon32.png",
              "48": "icon48.png",
@@ -10,6 +10,7 @@
     "default_icon": "icon.png",
     "default_popup": "popup.html"
   },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhS8UV1PjnxU5D8FsmyiTSQ0PIINlV197wjzG7F/uvb6YbveBpH56/6XIX1cuA53GLO2a8yrYyLrhJYIK7unwo/PAn6QnjZ0WP1eC0BYV0DPiLsP0VEdMntRCOrkxSBjVuysdiz2iP71qZW8LJulw63RSj1hCdamV/VLMjGewl734ulDZ38HhEpfbHK89Ob/ZVT/QvGkQdRBPHParqggdad7AksJfraeiA9j1yW3d5pgdu/hyZ04Jzyul4e/W+8tY11p7xJ7r9qabjPgNkOL0Zzc3j6AECJprlGO2Q36M9OXn8OMhlYRFXY2eytoWZc9kIFMKWcUUhXaE1wsU15sHmwIDAQAB",
   "permissions": [
     "activeTab"
   ],

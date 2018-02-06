@@ -28,3 +28,7 @@ My 'Final Project' Presentation can (embarssingly enough) be [found on YouTube](
 
 2017-10-17
 * Added link to Chrome Store.
+
+2018-02-05
+* Updated link colors.
+* Added conversion 'source' option. You can now choose if your source string is ASCII(char), ASCII(int), or Binary. The 'Convert' link will then cycle through the 3 conversions (although really 2; one output will always be the same as one source input).
