@@ -14,7 +14,7 @@ The Character Counts browser extension is a simple open source utility that simp
 ## Permission Justifications
 
 - The 'activeTab' permission is needed so the script can access any highlighted text for counting, as well as count all the characters on the active page.
-- The 'scripting' permission is need so the extension can perform the counting and calculation.
+- The 'scripting' permission is needed so the extension can perform the counting and calculations.
 
 I certify that the following disclosures are true for this browser extension:
 - I do not sell or transfer user data to third parties, outside of the approved use cases
