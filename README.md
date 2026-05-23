@@ -33,3 +33,6 @@ My 'Final Project' Presentation can (embarssingly enough) be [found on YouTube](
 * Updated link colors.
 * Added conversion 'source' option. You can now choose if your source string is ASCII(char), ASCII(int), or Binary. The 'Convert' link will then cycle through the 3 conversions (although really 2; one output will always be the same as one source input).
   - Fixed spacing issue with ASCII(int) and Binary source conversions.
+
+2026-05-22
+* Upgraded manifest from V2 to V3.

@@ -1,7 +1,7 @@
 <!doctype html>
 <!--
  This page is shown when the extension button is clicked,
- because the "browser_action" field in manifest.json
+ because the "action" field in manifest.json
  contains the "default_popup" key with value "popup.html".
  -->
 <html>
@@ -38,11 +38,6 @@
       }
       a:hover {
         color: green;
-      }
-      #container {
-        /*align-items: center;*/
-        /*display: flex;*/
-        /*justify-content: space-between;*/
       }
       #containerError {
         display: none;
@@ -125,7 +120,7 @@
       - JavaScript and HTML must be in separate files: see our
       - Content Security Policy documentation[1] for details and explanation.
       -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+      - [1]: https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview/
     -->
     <script src="popup.js"></script>
   </head>

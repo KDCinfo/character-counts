@@ -5,7 +5,7 @@
  *
  * It will also convert characters between ASCII (char), ASCII (int), && 8-bit (Byte).
  *
- * Developer: Keith D Commiskey (https://kdcinfo.com) 2017-10; 2018-02
+ * Developer: Keith D Commiskey (https://kdcinfo.com) 2017-10; 2018-02; 2026-05
  *
  */
 
@@ -25,6 +25,39 @@ let whichConvert = 0, // [0: 'ASCII (char)', 1: 'ASCII (int)', 2: '8-bit (Byte)'
     allSelectedCharCount = 0,
     allPageCharCount = 0;
 
+function showRuntimeError(errorMessage) {
+  document.getElementById('container').style.display = 'none';
+  document.getElementById('containerError').style.display = 'block';
+  document.getElementById('containerErrorTxt').innerHTML = errorMessage;
+}
+
+function executeScriptOnActiveTab(funcToRun, callback) {
+  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+    const activeTab = tabs && tabs[0];
+
+    if (!activeTab || typeof activeTab.id !== 'number') {
+      callback(undefined, { message: 'No active tab found.' });
+      return;
+    }
+
+    chrome.scripting.executeScript({
+      target: { tabId: activeTab.id },
+      func: funcToRun,
+    }, function(injectionResults) {
+      if (chrome.runtime.lastError) {
+        callback(undefined, chrome.runtime.lastError);
+        return;
+      }
+
+      const firstResult = injectionResults && injectionResults[0]
+        ? injectionResults[0].result
+        : undefined;
+
+      callback(firstResult, null);
+    });
+  });
+}
+
 function displayIt() {
 
   c0001 = document.getElementById('convert0001');
@@ -33,24 +66,16 @@ function displayIt() {
   // Get Selected Text on Page
   //
 
-  chrome.tabs.executeScript( {
-
+  executeScriptOnActiveTab(function() {
     // Getting selection from active tab/page: [rsanchez](https://stackoverflow.com/a/19165930/638153)
-    code: "window.getSelection().toString();"
+    return window.getSelection().toString();
+  }, function(selectionText, error) {
 
-  }, function(selection) {
-
-    if (chrome.runtime.lastError) {
-
-      document.getElementById('container').style.display = 'none';
-      document.getElementById('containerError').style.display = 'block';
-      document.getElementById('containerErrorTxt').innerHTML = chrome.runtime.lastError.message;
-      // console.log('chrome.tabs', chrome.runtime.lastError);
-
+    if (error) {
+      showRuntimeError(error.message);
     } else {
-
       // Place selected text (from web page) into input field (in extension popup)
-      document.getElementById('charVal').value = typeof(selection) === 'undefined' ? '' : selection[0];
+      document.getElementById('charVal').value = typeof(selectionText) === 'undefined' ? '' : selectionText;
 
       const charValLength = document.getElementById('charVal').value.length;
 
@@ -73,26 +98,20 @@ function displayIt() {
   // Get Page Text and Calc Perctentage
   //
 
-  chrome.tabs.executeScript( {
-
+  executeScriptOnActiveTab(function() {
     // Select all text on page: [Max G J Panas](https://stackoverflow.com/a/10606380/638153)
-    code: "document.body.innerText;"
+    return document.body ? document.body.innerText : '';
+  }, function(pageText, error) {
 
-  }, function(selection) {
-
-    if (chrome.runtime.lastError) {
-
-      document.getElementById('container').style.display = 'none';
-      document.getElementById('containerError').style.display = 'block';
-      document.getElementById('containerErrorTxt').innerHTML = chrome.runtime.lastError.message;
-      // console.log('chrome.tabs', chrome.runtime.lastError);
-
+    if (error) {
+      showRuntimeError(error.message);
     } else {
+      const cleanedPageText = typeof pageText === 'string' ? pageText.trim() : '';
 
-      document.getElementById('pageCount').value = selection[0].trim().length;
-      document.getElementById('pageAllText').value = selection[0].trim();
+      document.getElementById('pageCount').value = cleanedPageText.length;
+      document.getElementById('pageAllText').value = cleanedPageText;
 
-      allPageCharCount = selection[0].trim().length;
+      allPageCharCount = cleanedPageText.length;
       setPageCharPct();
     }
   });
